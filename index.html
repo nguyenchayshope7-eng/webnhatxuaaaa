@@ -1,4 +1,6 @@
-<html lang="vi"><head>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quản lý Email Online - Auto Filter</title>
@@ -75,19 +77,19 @@ button {
 
 <div id="customToast"></div>
 
-<h3>📨 Ai sài web này sẽ nhặt không ra xu</h3>
+<h3>📨 Web mail của aaaaaaaaaaaaa</h3>
 
-<textarea id="emailListInput" placeholder="Không ra xu, không ra xu"></textarea>
-<button id="addListButton">➕ bạn bị trừ 3k xu</button>
+<textarea id="emailListInput" placeholder="Dán email, text rác, phân cách bất kỳ"></textarea>
+<button id="addListButton">➕ Thêm Email</button>
 <button id="deleteListButton">🗑️ Xóa Danh Sách Email</button>
 
-<input type="text" id="emailOutput" readonly="" placeholder="Email sẽ xuất hiện ở đây">
+<input type="text" id="emailOutput" readonly placeholder="Email sẽ xuất hiện ở đây">
 <button id="manualCopyButton">📋 Copy</button>
 
 <p id="count">📊 Số email còn lại: 0</p>
 
 <button id="clearLogsButton">🧹 Clear Log Copy</button>
-<button id="copyButton">📋 Log &amp; Tạo acc Mỹ bị band</button>
+<button id="copyButton">📋 Lấy & Copy Email</button>
 
 <script>
 /* ========= FIREBASE ========= */
@@ -101,7 +103,7 @@ const firebaseConfig = {
   appId: "1:730980613993:web:89f030cd21f3878829c7f8",
   measurementId: "G-632PXSNQK5"
 };
-
+firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const emailRef = db.ref("emails");
 const copyLogsRef = db.ref("copyLogs");
@@ -225,6 +227,5 @@ clearLogsButton.onclick = () => {
 };
 </script>
 
-
-
-</body></html>
+</body>
+</html>
